@@ -1,7 +1,9 @@
-const animal = new Array ('cat', 'dog', 'snake', 'jaguar', 'monkey');
-animal.push("kiwi");
-console.log(animal);
-animal.pop()
-console.log(animal);
-delete animal[3]
-console.log(animal)
+let animal = ['cat', 'dog', 'snake', 'jaguar', 'monkey'];
+function removeElement(animal, element) {
+  let index = animal.indexOf(element);
+  if (index !== -1) {
+    animal.splice(index, 1);
+  }
+  return animal;
+}
+console.log(removeElement(animal, 'monkey'));
